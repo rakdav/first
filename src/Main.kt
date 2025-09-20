@@ -204,7 +204,7 @@ fun main() {
     }
     for (array in cinema) {
         for (value in array) {
-            print("$value ")
+            print("$value")
         }
         println()
     }
