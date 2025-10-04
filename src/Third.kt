@@ -16,7 +16,7 @@ open class Person(private val name: String) {
             if ((value > 0) and (value<110)) field=value
         }
         get() = field
-    fun getName(): String {
+    private fun getName(): String {
         return name
     }
     fun sayHello(){
