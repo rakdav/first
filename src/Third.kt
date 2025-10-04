@@ -22,7 +22,7 @@ fun main() {
 }
 fun travel(obj:Movable)=obj.move()
 fun work(worker: Worker)=worker.doWork()
-fun study(student: WorkingStudent)=student.doWork()
+fun study(student: WorkingStudent)=student.study()
 abstract class Human(val name:String){
     abstract var age:Int
     abstract fun print()
