@@ -33,10 +33,29 @@ fun main() {
     //Лямбда-выражения
   //  val hello={println("Hello World")}
    // {message:String->println(message)}("Hello World")
-    val sum={x:Int,y:Int-> println(x+y)}
-    val sub={x:Int,y:Int-> x-y}
-    sum(2,5)
-    println(sub(9,4))
+//    val sum={x:Int,y:Int-> println(x+y)}
+//    val sub={x:Int,y:Int-> x-y}
+//    sum(2,5)
+//    println(sub(9,4))
+    //Замыкания
+    val fn=outer()
+    fn()
+    fn()
+    fn()
+    val func=multiply(5)
+    var result=func(6)
+    println(result)
+}
+fun outer():()->Unit{
+    var n=5
+    fun inner(){
+        n++
+        println(n)
+    }
+    return ::inner
+}
+fun multiply(n:Int):(Int)->Int{
+    return {m:Int->n*m}
 }
 fun doOperation(x:Int,y:Int,op:(Int,Int)->Int){
     println(op(x,y))
