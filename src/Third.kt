@@ -27,23 +27,23 @@ abstract class Human(val name:String){
     abstract var age:Int
     abstract fun print()
 }
-open class Person(name: String,override var age:Int):Human(name){
-    private var _age=1
-//    var age:Int=18
-//        set(value) {
-//            if ((value > 0) and (value<110)) field=value
-//        }
-//        get() = field
-    override fun print(){
-        println("Меня зовут:${name}, мне $age лет.")
-    }
-}
-class Employee(name: String, age: Int,private val company:String) : Person(name,age){
-    override fun print(){
-        super.print()
-        println("Работаю в $company.")
-    }
-}
+//open class Person(name: String,override var age:Int):Human(name){
+//    private var _age=1
+////    var age:Int=18
+////        set(value) {
+////            if ((value > 0) and (value<110)) field=value
+////        }
+////        get() = field
+//    override fun print(){
+//        println("Меня зовут:${name}, мне $age лет.")
+//    }
+//}
+//class Employee(name: String, age: Int,private val company:String) : Person(name,age){
+//    override fun print(){
+//        super.print()
+//        println("Работаю в $company.")
+//    }
+//}
 
 abstract class Figure{
     abstract fun perimetr():Double
